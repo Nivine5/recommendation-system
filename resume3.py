@@ -3,13 +3,13 @@ import pandas as pd
 import os
 
 st.set_page_config(page_title="Static Resume Matcher", layout="centered")
-st.title("🔍 AI Resume Matcher (Static Upload Demo)")
+st.title(" AI Resume Matcher (Static Upload Demo)")
 
 # ----------------------------------
 # Uploaded Resume (Simulated Logic)
 # ----------------------------------
 
-st.header("📤 Upload Resume (PDF or DOCX)")
+st.header(" Upload Resume (PDF or DOCX)")
 uploaded_file = st.file_uploader("Upload your resume:", type=["pdf", "docx"])
 
 # Sample resume data dictionary
@@ -85,15 +85,15 @@ if uploaded_file is not None:
     if resume_key in example_data:
         resume = example_data[resume_key]
 
-        st.success(f"✅ You uploaded: `{resume_key}`")
+        st.success(f" You uploaded: `{resume_key}`")
 
         # 2. Resume Content
         st.header("📄 Resume Preview")
         st.markdown(resume["content"])
 
         # 3. Predicted Category
-        st.header("📌 Predicted Resume Category")
-        st.success(f"✅ **{resume['category']}**")
+        st.header(" Predicted Resume Category")
+        st.success(f" **{resume['category']}**")
 
         # 4. Extracted Features
         st.header("🧾 Extracted Resume Features")
